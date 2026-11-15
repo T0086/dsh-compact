@@ -1,0 +1,11 @@
+- insert:
+    - id: idle-compact
+      name: idle-compact
+      config:
+        enabled: true
+        # 30 分钟没有用户消息，才认为"人已经走开了"
+        idleMs: 1800000
+        # 每分钟扫一次
+        scanMs: 60000
+        # 先只报告判定，不真的压缩。验证通过后改成 false
+        dryRun: false
