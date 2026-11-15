@@ -1,0 +1,24 @@
+{
+  "name": "idle-compact",
+  "version": "0.1.0",
+  "private": true,
+  "description": "闲置压缩：一段时间没人说话、且没有任务在跑时，把会话历史压成摘要",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  }
+}
