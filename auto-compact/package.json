@@ -1,0 +1,28 @@
+{
+  "name": "auto-compact",
+  "version": "0.1.0",
+  "private": true,
+  "description": "把宿主的 compaction.compactNow() 暴露成一个工具，让定时任务能自己压缩上下文",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-llm": {
+      "optional": false
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": false
+    }
+  }
+}
